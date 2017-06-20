@@ -243,6 +243,8 @@
         "Form_Settings_ToolTip_APIBindPortStart": "Set starting port number from which miner API Bind ports will be set for comunication.",
         "Form_Settings_DagGeneration": "Dag Load Mode",
         "Form_Settings_ToolTip_DagGeneration": "Sets Dag Load Mode for ethminers.",
+        "Form_Settings_ToolTip_MiningKeystrokeStart": "Keystrokes to send to the OS when mining starts.",
+        "Form_Settings_ToolTip_MiningKeystrokeStop": "Keystrokes to send to the OS when mining stops.",
         "AlgorithmsListView_Enabled" : "Enabled",
         "AlgorithmsListView_Algorithm" : "Algorithm",
         "AlgorithmsListView_Speed" : "Speed",

@@ -230,6 +230,9 @@
 		"Form_Settings_ToolTip_DaggerHashimotoGenerateDevice": "Elige que GPU creará el archivo DAG.\nElije la GPU más rápida posible.",
 		"Form_Settings_ToolTip_DisableAMDTempControl": "Márcalo si quieres desactivar el control de temperatura predeterminado\npara las GPUs de AMD (excepto para el algoritmo daggerhashimoto).",
 
+        "Form_Settings_ToolTip_MiningKeystrokeStart": "Keystrokes to send to the OS when mining starts.",
+        "Form_Settings_ToolTip_MiningKeystrokeStop": "Keystrokes to send to the OS when mining stops.",
+
 		"Form_Settings_ToolTip_AlgoSkip": "Márcalo si quieres saltar y desactivar un algoritmo en particular.\nEl minado y el benchmark serán desactivados para este algoritmo en particular.\nEl cambio automático de algoritmo también ignorará este algoritmo.",
 		"Form_Settings_ToolTip_AlgoUsePassword": "Usa esta contraseña al iniciar este minero y este algoritmo. Si no se establece, UsePassword del grupo se usará.",
 		"Form_Settings_ToolTip_AlgoBenchmarkSpeed": "Personalización de los ratios de los algoritmos al cambiar manualmente las velocidades de los benchmark.",

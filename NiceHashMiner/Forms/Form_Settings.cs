@@ -213,6 +213,9 @@ namespace NiceHashMiner.Forms {
             toolTip1.SetToolTip(pictureBox_SwitchProfitabilityThreshold, International.GetText("Form_Settings_ToolTip_SwitchProfitabilityThreshold"));
             toolTip1.SetToolTip(label_SwitchProfitabilityThreshold, International.GetText("Form_Settings_ToolTip_SwitchProfitabilityThreshold"));
 
+            toolTip1.SetToolTip(textBox_MinerKeystrokeStart, International.GetText("Form_Settings_ToolTip_MiningKeystrokeStart"));
+            toolTip1.SetToolTip(textBox_MinerKeystrokeStop, International.GetText("Form_Settings_ToolTip_MiningKeystrokeStop"));
+
             this.Text = International.GetText("Form_Settings_Title");
 
             algorithmSettingsControl1.InitLocale(toolTip1);
@@ -325,6 +328,8 @@ namespace NiceHashMiner.Forms {
             {
                 this.textBox_BitcoinAddress.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
                 this.textBox_WorkerName.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
+                this.textBox_MinerKeystrokeStart.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
+                this.textBox_MinerKeystrokeStop.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
                 // these are ints only
                 this.textBox_SwitchMinSecondsFixed.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
                 this.textBox_SwitchMinSecondsDynamic.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
@@ -554,6 +559,10 @@ namespace NiceHashMiner.Forms {
             // min profit
             ConfigManager.GeneralConfig.MinimumProfit = Helpers.ParseDouble(textBox_MinProfit.Text);
             ConfigManager.GeneralConfig.SwitchProfitabilityThreshold = Helpers.ParseDouble(textBox_SwitchProfitabilityThreshold.Text);
+
+            // Scripting
+            ConfigManager.GeneralConfig.KeystrokesMiningStart = textBox_MinerKeystrokeStart.Text;
+            ConfigManager.GeneralConfig.KeystrokesMiningStop = textBox_MinerKeystrokeStop.Text;
 
             // Fix bounds
             ConfigManager.GeneralConfig.FixSettingBounds();

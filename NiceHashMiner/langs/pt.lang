@@ -195,6 +195,9 @@
         "Form_Settings_ToolTip_CPU_LessThreads": "Reduza o número de threads usados em cada CPU por LessThreads.",
         "Form_Settings_ToolTip_CPU_ForceCPUExtension": "Força alguma extensão de mineração para CPU.",
 
+        "Form_Settings_ToolTip_MiningKeystrokeStart": "Keystrokes to send to the OS when mining starts.",
+        "Form_Settings_ToolTip_MiningKeystrokeStop": "Keystrokes to send to the OS when mining stops.",
+
         "Form_Settings_ToolTip_SwitchMinSecondsFixed": "Configuração fixa de tempo mínimo (em segundos) antes de trocar de algoritimo de mineração\nTempo total é SwitchMinSecondsFixed + SwitchMinSecondsDynamic.",
         "Form_Settings_ToolTip_SwitchMinSecondsDynamic": "Parte aleatória do tempo mínimo (em segundos) antes de trocar de algoritimo de mineração.\nTempo total é SwitchMinSecondsFixed + SwitchMinSecondsDynamic.\nA parte aleatória é usada para evitar que todos os usuários de NiceHashMiner em todo o mundo tenham exatamente o mesmo padrão de mudança.",
         "Form_Settings_ToolTip_SwitchMinSecondsAMD": "Configuração fixa de tempo mínimo (em segundos) antes de trocar de algoritimo de mineração (tempo adicional para GPUs AMD).\nTempo total é SwitchMinSecondsFixed + SwitchMinSecondsAMD + SwitchMinSecondsDynamic.",

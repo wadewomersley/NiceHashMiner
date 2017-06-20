@@ -22,6 +22,10 @@ namespace NiceHashMiner.Configs.Data {
         //public int LessThreads;
         public CPUExtensionType ForceCPUExtension = CPUExtensionType.Automatic;
 
+        // Scripting
+        public string KeystrokesMiningStart = "";
+        public string KeystrokesMiningStop = "";
+
         public int SwitchMinSecondsFixed = 90;
         public int SwitchMinSecondsDynamic = 30;
         public int SwitchMinSecondsAMD = 60;
@@ -73,6 +77,8 @@ namespace NiceHashMiner.Configs.Data {
             Language = LanguageType.En;
             ForceCPUExtension = CPUExtensionType.Automatic;
             BitcoinAddress = "";
+            KeystrokesMiningStart = "";
+            KeystrokesMiningStop = "";
             WorkerName = "worker1";
             ServiceLocation = 0;
             AutoStartMining = false;
