@@ -3,6 +3,7 @@ using NiceHashMiner.Net20_backport;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace NiceHashMiner.Configs.Data {
     [Serializable]
@@ -23,8 +24,8 @@ namespace NiceHashMiner.Configs.Data {
         public CPUExtensionType ForceCPUExtension = CPUExtensionType.Automatic;
 
         // Scripting
-        public string KeystrokesMiningStart = "";
-        public string KeystrokesMiningStop = "";
+        public Keys KeystrokesMiningStart = Keys.None;
+        public Keys KeystrokesMiningStop = Keys.None;
 
         public int SwitchMinSecondsFixed = 90;
         public int SwitchMinSecondsDynamic = 30;
@@ -77,8 +78,8 @@ namespace NiceHashMiner.Configs.Data {
             Language = LanguageType.En;
             ForceCPUExtension = CPUExtensionType.Automatic;
             BitcoinAddress = "";
-            KeystrokesMiningStart = "";
-            KeystrokesMiningStop = "";
+            KeystrokesMiningStart = Keys.None;
+            KeystrokesMiningStop = Keys.None;
             WorkerName = "worker1";
             ServiceLocation = 0;
             AutoStartMining = false;

@@ -89,6 +89,8 @@
             this.label_displayCurrency = new System.Windows.Forms.Label();
             this.tabPageAdvanced = new System.Windows.Forms.TabPage();
             this.groupBoxMisc = new System.Windows.Forms.GroupBox();
+            this.label_MinerKeystrokeStop = new System.Windows.Forms.Label();
+            this.textBox_MinerKeystrokeStop = new System.Windows.Forms.TextBox();
             this.label_MinerKeystrokeStart = new System.Windows.Forms.Label();
             this.textBox_MinerKeystrokeStart = new System.Windows.Forms.TextBox();
             this.groupBox_Miners = new System.Windows.Forms.GroupBox();
@@ -139,8 +141,6 @@
             this.buttonSaveClose = new System.Windows.Forms.Button();
             this.buttonDefaults = new System.Windows.Forms.Button();
             this.buttonCloseNoSave = new System.Windows.Forms.Button();
-            this.label_MinerKeystrokeStop = new System.Windows.Forms.Label();
-            this.textBox_MinerKeystrokeStop = new System.Windows.Forms.TextBox();
             this.tabControlGeneral.SuspendLayout();
             this.tabPageGeneral.SuspendLayout();
             this.groupBox_Misc.SuspendLayout();
@@ -993,6 +993,25 @@
             this.groupBoxMisc.TabStop = false;
             this.groupBoxMisc.Text = "Misc.";
             // 
+            // label_MinerKeystrokeStop
+            // 
+            this.label_MinerKeystrokeStop.AutoSize = true;
+            this.label_MinerKeystrokeStop.Location = new System.Drawing.Point(306, 22);
+            this.label_MinerKeystrokeStop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_MinerKeystrokeStop.Name = "label_MinerKeystrokeStop";
+            this.label_MinerKeystrokeStop.Size = new System.Drawing.Size(197, 20);
+            this.label_MinerKeystrokeStop.TabIndex = 379;
+            this.label_MinerKeystrokeStop.Text = "Keystrokes on Mining Stop";
+            // 
+            // textBox_MinerKeystrokeStop
+            // 
+            this.textBox_MinerKeystrokeStop.Location = new System.Drawing.Point(306, 47);
+            this.textBox_MinerKeystrokeStop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_MinerKeystrokeStop.Name = "textBox_MinerKeystrokeStop";
+            this.textBox_MinerKeystrokeStop.ReadOnly = true;
+            this.textBox_MinerKeystrokeStop.Size = new System.Drawing.Size(256, 26);
+            this.textBox_MinerKeystrokeStop.TabIndex = 378;
+            // 
             // label_MinerKeystrokeStart
             // 
             this.label_MinerKeystrokeStart.AutoSize = true;
@@ -1008,6 +1027,7 @@
             this.textBox_MinerKeystrokeStart.Location = new System.Drawing.Point(14, 47);
             this.textBox_MinerKeystrokeStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_MinerKeystrokeStart.Name = "textBox_MinerKeystrokeStart";
+            this.textBox_MinerKeystrokeStart.ReadOnly = true;
             this.textBox_MinerKeystrokeStart.Size = new System.Drawing.Size(256, 26);
             this.textBox_MinerKeystrokeStart.TabIndex = 376;
             // 
@@ -1556,24 +1576,6 @@
             this.buttonCloseNoSave.Text = "&Close without Saving";
             this.buttonCloseNoSave.UseVisualStyleBackColor = true;
             this.buttonCloseNoSave.Click += new System.EventHandler(this.buttonCloseNoSave_Click);
-            // 
-            // label1
-            // 
-            this.label_MinerKeystrokeStop.AutoSize = true;
-            this.label_MinerKeystrokeStop.Location = new System.Drawing.Point(306, 22);
-            this.label_MinerKeystrokeStop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_MinerKeystrokeStop.Name = "label1";
-            this.label_MinerKeystrokeStop.Size = new System.Drawing.Size(198, 20);
-            this.label_MinerKeystrokeStop.TabIndex = 379;
-            this.label_MinerKeystrokeStop.Text = "Keystrokes on Mining Stop";
-            // 
-            // textBox1
-            // 
-            this.textBox_MinerKeystrokeStop.Location = new System.Drawing.Point(306, 47);
-            this.textBox_MinerKeystrokeStop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox_MinerKeystrokeStop.Name = "textBox1";
-            this.textBox_MinerKeystrokeStop.Size = new System.Drawing.Size(256, 26);
-            this.textBox_MinerKeystrokeStop.TabIndex = 378;
             // 
             // Form_Settings
             // 

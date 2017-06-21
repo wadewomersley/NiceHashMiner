@@ -34,6 +34,18 @@ namespace NiceHashMiner {
             }
         }
 
+        public static void ShowPressedKeys(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                ((TextBox)sender).Text = "";
+                return;
+            }
+
+            var modifiers = e.Modifiers == Keys.None ? "" : (e.Modifiers.ToString().Replace(", ", " + ") + " + ");
+            ((TextBox)sender).Text = modifiers + e.KeyCode.ToString();
+        }
+
         private static bool doubleInvalid(char c) { return !char.IsControl(c) && !char.IsDigit(c) && (c != '.'); }
 
         private static bool IsHandleZero(KeyPressEventArgs e, string checkText) {

@@ -328,8 +328,6 @@ namespace NiceHashMiner.Forms {
             {
                 this.textBox_BitcoinAddress.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
                 this.textBox_WorkerName.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
-                this.textBox_MinerKeystrokeStart.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
-                this.textBox_MinerKeystrokeStop.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
                 // these are ints only
                 this.textBox_SwitchMinSecondsFixed.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
                 this.textBox_SwitchMinSecondsDynamic.Leave += new System.EventHandler(this.GeneralTextBoxes_Leave);
@@ -353,6 +351,11 @@ namespace NiceHashMiner.Forms {
                 this.textBox_APIBindPortStart.KeyPress += new KeyPressEventHandler(TextBoxKeyPressEvents.textBoxIntsOnly_KeyPress);
                 // set double only keypress
                 this.textBox_MinProfit.KeyPress += new KeyPressEventHandler(TextBoxKeyPressEvents.textBoxDoubleOnly_KeyPress);
+                // Key binding watch
+                this.textBox_MinerKeystrokeStart.KeyDown += new KeyEventHandler(TextBoxKeyPressEvents.ShowPressedKeys);
+                this.textBox_MinerKeystrokeStop.KeyDown += new KeyEventHandler(TextBoxKeyPressEvents.ShowPressedKeys);
+                this.textBox_MinerKeystrokeStart.KeyDown += new KeyEventHandler(this.KeystrokeLogger);
+                this.textBox_MinerKeystrokeStop.KeyDown += new KeyEventHandler(this.KeystrokeLogger);
             }
             // Add EventHandler for all the general tab's textboxes
             {
@@ -410,6 +413,9 @@ namespace NiceHashMiner.Forms {
                 textBox_APIBindPortStart.Text = ConfigManager.GeneralConfig.ApiBindPortPoolStart.ToString();
                 textBox_MinProfit.Text = ConfigManager.GeneralConfig.MinimumProfit.ToString("F2").Replace(',', '.'); // force comma;
                 textBox_SwitchProfitabilityThreshold.Text = ConfigManager.GeneralConfig.SwitchProfitabilityThreshold.ToString("F2").Replace(',', '.'); // force comma;
+
+                textBox_MinerKeystrokeStart.Text = ConfigManager.GeneralConfig.KeystrokesMiningStart.ToString().Replace(", ", " + ");
+                textBox_MinerKeystrokeStop.Text = ConfigManager.GeneralConfig.KeystrokesMiningStop.ToString().Replace(", ", " + ");
             }
 
             // set custom control referances
@@ -541,6 +547,19 @@ namespace NiceHashMiner.Forms {
             }
         }
 
+        private void KeystrokeLogger(object sender, KeyEventArgs e)
+        {
+            if (sender == textBox_MinerKeystrokeStart)
+            {
+                ConfigManager.GeneralConfig.KeystrokesMiningStart = e.KeyData != Keys.Back ? e.KeyData : Keys.None;
+            }
+            else if (sender == textBox_MinerKeystrokeStop)
+            {
+
+                ConfigManager.GeneralConfig.KeystrokesMiningStop = e.KeyData != Keys.Back ? e.KeyData : Keys.None;
+            }
+        }
+
         private void GeneralTextBoxes_Leave(object sender, EventArgs e) {
             if (!_isInitFinished) return;
             IsChange = true;
@@ -559,10 +578,6 @@ namespace NiceHashMiner.Forms {
             // min profit
             ConfigManager.GeneralConfig.MinimumProfit = Helpers.ParseDouble(textBox_MinProfit.Text);
             ConfigManager.GeneralConfig.SwitchProfitabilityThreshold = Helpers.ParseDouble(textBox_SwitchProfitabilityThreshold.Text);
-
-            // Scripting
-            ConfigManager.GeneralConfig.KeystrokesMiningStart = textBox_MinerKeystrokeStart.Text;
-            ConfigManager.GeneralConfig.KeystrokesMiningStop = textBox_MinerKeystrokeStop.Text;
 
             // Fix bounds
             ConfigManager.GeneralConfig.FixSettingBounds();
